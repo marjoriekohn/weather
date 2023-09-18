@@ -8,5 +8,5 @@
     "moment": "^2.29.4",
     "@netlify/functions": "github:netlify/functions"
   },
-  "type": "module",
+  "type": "module"
 }
