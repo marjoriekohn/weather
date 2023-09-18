@@ -1,0 +1,36 @@
+:root {
+	--headerfont: 'Rock Salt', Arial, sans-serif;
+	--bodyfont: 'Poppins', Arial, sans-serif;
+}
+body {
+	font-family: var(--headerfont);
+	font-size: 20px;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header { /* DATE & TIME */
+	margin-top: 8rem;
+	margin-bottom: 1rem;
+}
+
+table {
+	font-family: var(--bodyfont);
+	border: .5rem dashed #28a745;
+	border-radius: 1rem;
+}
+
+main .table {
+	width: auto; /* make table width as per content */
+	margin: 0 auto; /* center the table horizontally */
+	padding: 2rem;
+}
+
+/* Align numbers to the right */
+td:last-child {
+	text-align: right;
+}
