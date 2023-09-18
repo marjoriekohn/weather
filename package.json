@@ -9,7 +9,4 @@
     "@netlify/functions": "github:netlify/functions"
   },
   "type": "module",
-  "scripts": {
-    "build": "npm run-script"
-  }
 }
