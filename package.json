@@ -10,6 +10,6 @@
   },
   "type": "module",
   "scripts": {
-    "build": "npm run"
+    "build": "npm run-script"
   }
 }
