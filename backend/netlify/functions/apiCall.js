@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
-const handleErrors_js_1 = require("./front-end/handleErrors.js");
+const handleErrors_1 = require("../../helper/handleErrors.js");
 exports.handler = function (event) {
     return __awaiter(this, void 0, void 0, function* () {
         const API_KEY = process.env.API_KEY;
@@ -33,7 +33,7 @@ exports.handler = function (event) {
             };
         }
         catch (err) {
-            (0, handleErrors_js_1.handleErrors)(err);
+            (0, handleErrors_1.handleErrors)(err);
             return {
                 statusCode: 500,
                 body: JSON.stringify({ error: err.message }),

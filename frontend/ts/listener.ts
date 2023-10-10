@@ -1,10 +1,9 @@
 /**
  * Sets up event listeners for the weather application.
  */
-import {fetchWeather} from './fetchWeather.js';
-import {displayWeather} from "./displayWeather.js";
-import {showErrorMessage} from "./showErrorMessage.js";
-import {handleErrors} from "./handleErrors.js";
+import {fetchWeather} from './fetchWeather';
+import {displayWeather} from "./displayWeather";
+import {handleErrors} from "./handleErrors";
 
 type Weather = {
     wind_speed: number;

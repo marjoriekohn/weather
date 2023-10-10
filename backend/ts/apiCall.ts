@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { handleErrors } from '../../front-end/ts/handleErrors.js';
+import { handleErrors } from '../../frontend/ts/handleErrors'
+
 interface NetlifyEvent {
     queryStringParameters: {
         userZip?: string;

@@ -2,7 +2,7 @@
  * Centralized error handling function.
  * @param error - The error object to be handled.
  */
-import { showErrorMessage } from "./showErrorMessage.js";
+import { showErrorMessage } from "./showErrorMessage";
 export function handleErrors(error) {
     if (error instanceof Error) {
         console.error('An error occurred:', error.message);

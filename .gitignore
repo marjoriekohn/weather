@@ -80,3 +80,7 @@ fabric.properties
 bootstrap-auto-generated
 node_modules
 .idea/
+
+.env
+# Local Netlify folder
+.netlify
