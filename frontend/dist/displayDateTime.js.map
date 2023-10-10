@@ -1,1 +1,1 @@
-{"version":3,"file":"displayDateTime.js","sourceRoot":"","sources":["../ts/displayDateTime.ts"],"names":[],"mappings":";AAAA,MAAM,MAAM,GAAG,OAAO,CAAC,QAAQ,CAAC,CAAC;AAEjC,MAAM,WAAW,GAAG,MAAM,EAAE,CAAC,MAAM,CAAC,sBAAsB,CAAC,CAAC;AAC5D,CAAC,QAAQ,CAAC,cAAc,CAAC,cAAc,CAAE,CAAC,CAAC,SAAS,GAAG,WAAW,CAAC"}
+{"version":3,"file":"displayDateTime.js","sourceRoot":"","sources":["../ts/displayDateTime.ts"],"names":[],"mappings":";AAAA,0EAA0E;AAC1E,MAAM,WAAW,GAAG,MAAM,EAAE,CAAC,MAAM,CAAC,sBAAsB,CAAC,CAAC;AAC5D,CAAC,QAAQ,CAAC,cAAc,CAAC,cAAc,CAAE,CAAC,CAAC,SAAS,GAAG,WAAW,CAAC"}
