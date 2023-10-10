@@ -1,9 +1,9 @@
 /**
  * Sets up event listeners for the weather application.
  */
-import { fetchWeather } from './fetchWeather';
-import { displayWeather } from "./displayWeather";
-import { handleErrors } from "./handleErrors";
+import { fetchWeather } from './fetchWeather.js';
+import { displayWeather } from "./displayWeather.js";
+import { handleErrors } from "./handleErrors.js";
 (function setupListeners() {
     const getWeatherButton = (document.getElementById('get-weather-button'));
     const userZipInput = document.getElementById('user-zip-input');

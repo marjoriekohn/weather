@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { handleErrors } from '../../frontend/ts/handleErrors'
+import { handleErrors } from '../../frontend/ts/handleErrors.js'
 
 interface NetlifyEvent {
     queryStringParameters: {

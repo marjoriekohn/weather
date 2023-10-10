@@ -4,7 +4,7 @@
  * @param lat - The latitude of the user's location. (auto-detected - coming soon)
  * @param lon - The longitude of the user's location. (auto-detected - coming soon)
  */
-import { handleErrors } from "./handleErrors";
+import { handleErrors } from "./handleErrors.js";
 import axios from "axios";
 export async function fetchWeather(userZip) {
     try {
