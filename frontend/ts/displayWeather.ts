@@ -16,15 +16,31 @@ type Weather = {
     max_temp: number;
 };
 
-export function displayWeather(weatherData: Weather): void {
-    (document.getElementById('windSpeed')!).innerHTML = weatherData.wind_speed.toString();
-    (document.getElementById('windDegrees')!).innerHTML = weatherData.wind_degrees.toString();
-    (document.getElementById('temperature')!).innerHTML = weatherData.temp.toString();
-    (document.getElementById('humidity')!).innerHTML = weatherData.humidity.toString();
-    (document.getElementById('sunset')!).innerHTML = weatherData.sunset.toString();
-    (document.getElementById('minTemp')!).innerHTML = weatherData.min_temp.toString();
-    (document.getElementById('cloudPercentage')!).innerHTML = weatherData.cloud_pct.toString();
-    (document.getElementById('feelsLike')!).innerHTML = weatherData.feels_like.toString();
-    (document.getElementById('sunrise')!).innerHTML = weatherData.sunrise.toString();
-    (document.getElementById('maxTemp')!).innerHTML = weatherData.max_temp.toString();
+export function displayWeather(weatherData: Weather | null): void {
+    if (!weatherData) {
+        const errorMessage = document.getElementById('errorMessage');
+        if (errorMessage) {
+            errorMessage.textContent = 'No weather data available.';
+            errorMessage.style.display = 'block';
+        }
+        return;
+    }
+
+    const updateElementText = (id: string, text: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = text;
+        }
+    };
+
+    updateElementText('windSpeed', weatherData.wind_speed.toString());
+    updateElementText('windDegrees', weatherData.wind_degrees.toString());
+    updateElementText('temperature', weatherData.temp.toString());
+    updateElementText('humidity', weatherData.humidity.toString());
+    updateElementText('sunset', weatherData.sunset.toString());
+    updateElementText('minTemp', weatherData.min_temp.toString());
+    updateElementText('cloudPercentage', weatherData.cloud_pct.toString());
+    updateElementText('feelsLike', weatherData.feels_like.toString());
+    updateElementText('sunrise', weatherData.sunrise.toString());
+    updateElementText('maxTemp', weatherData.max_temp.toString());
 }

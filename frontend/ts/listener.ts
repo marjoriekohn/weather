@@ -21,17 +21,28 @@ type Weather = {
 (function setupListeners(): void {
     const getWeatherButton = (document.getElementById('get-weather-button')!);
     const userZipInput = (document.getElementById('user-zip-input')! as HTMLInputElement);
-    let weatherData: Weather;
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (!getWeatherButton || !userZipInput || !loadingIndicator || !errorMessage) {
+        console.error('One or more essential elements are missing in the DOM.');
+        return;
+    }
 
     getWeatherButton.addEventListener('click', () => {
+        loadingIndicator.style.display = 'block';
+        errorMessage.style.display = 'none';
+
         fetchWeather(userZipInput.value)
             .then(fetchedWeather => {
-                weatherData = fetchedWeather;
-                displayWeather(weatherData);
+                displayWeather(fetchedWeather);
+                loadingIndicator.style.display = 'none';
             })
             .catch(error => {
-                handleError(error);
                 console.error('Oops! Error fetching weather data:', error);
+                loadingIndicator.style.display = 'none';
+                errorMessage.textContent = 'Failed to fetch weather data. Please try again.';
+                errorMessage.style.display = 'block';
             });
     });
 })();
