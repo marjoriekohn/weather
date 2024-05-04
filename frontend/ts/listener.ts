@@ -29,7 +29,8 @@ type Weather = {
         return;
     }
 
-    getWeatherButton.addEventListener('click', () => {
+    getWeatherButton.addEventListener('click', (event) => {
+        event.preventDefault();
         loadingIndicator.style.display = 'block';
         errorMessage.style.display = 'none';
 

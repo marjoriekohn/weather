@@ -40,6 +40,7 @@ td:last-child {
 	padding: 10px;
 	font-size: 16px;
 	color: #333;
+	display: none;
 }
 
 #errorMessage {
@@ -47,4 +48,5 @@ td:last-child {
 	padding: 10px;
 	font-size: 16px;
 	color: red;
+	display: none;
 }
