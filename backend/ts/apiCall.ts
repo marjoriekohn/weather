@@ -24,10 +24,10 @@ exports.handler = async function(event: NetlifyEvent) {
             body: JSON.stringify(response.data),
         };
     } catch (err: any) {
-        handleErrors(err);
+        console.error("API Call Error:", err.message);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: err.message }),
+            body: JSON.stringify({ error: "Failed to fetch weather data." }),
         };
     }
 };

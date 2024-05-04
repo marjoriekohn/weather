@@ -21,14 +21,15 @@ type Weather = {
     max_temp: number;
 };
 
-export async function fetchWeather(userZip: string): Promise<Weather> {
+export async function fetchWeather(userZip: string): Promise<Weather | null> {
     try {
         let response = await axios.get(`/.netlify/functions/apiCall`, {
             params: { userZip: userZip },
         });
         return response.data;
     } catch (err: any) {
+        console.error("Fetch Weather Error:", err.message);
         handleErrors(err);
-        throw err;
+        return null;
     }
 }
