@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {handleErrors} from "../../frontend/ts/handleErrors";
+import {handleError} from "../../frontend/ts/handleError";
 
 interface NetlifyEvent {
     queryStringParameters: {
@@ -25,6 +25,7 @@ exports.handler = async function(event: NetlifyEvent) {
         };
     } catch (err: any) {
         console.error("API Call Error:", err.message);
+        handleError(err);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: "Failed to fetch weather data." }),

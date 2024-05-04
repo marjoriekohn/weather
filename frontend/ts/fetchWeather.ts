@@ -5,7 +5,7 @@
  * @param lon - The longitude of the user's location. (auto-detected - coming soon)
  */
 
-import { handleErrors } from "./handleErrors";
+import { handleError } from "./handleError";
 import axios from "axios";
 
 type Weather = {
@@ -21,15 +21,15 @@ type Weather = {
     max_temp: number;
 };
 
-export async function fetchWeather(userZip: string): Promise<Weather | null> {
+export async function fetchWeather(userZip: string): Promise<Weather> {
     try {
         let response = await axios.get(`/.netlify/functions/apiCall`, {
             params: { userZip: userZip },
         });
+        console.log('Fetched Weather:', response.data);
         return response.data;
     } catch (err: any) {
-        console.error("Fetch Weather Error:", err.message);
-        handleErrors(err);
-        return null;
+        handleError(err);
+        throw err;
     }
 }

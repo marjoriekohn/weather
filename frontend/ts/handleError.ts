@@ -4,7 +4,7 @@
  */
 import {showErrorMessage} from "./showErrorMessage";
 
-export function handleErrors(error: unknown): void {
+export function handleError(error: unknown): void {
     // @ts-ignore
     console.error("Error caught in handleErrors:", error.message);
 }
