@@ -10,7 +10,11 @@
   },
   "type": "module",
   "scripts": {
-    "build": "npm run-script",
+    "start": "parcel frontend/index.html --dist-dir frontend/dist",
+    "build": "parcel build frontend/index.html --dist-dir frontend/dist",
     "dev": "backend/netlify dev"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }

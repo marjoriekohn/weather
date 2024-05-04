@@ -5,7 +5,7 @@
  * @param lon - The longitude of the user's location. (auto-detected - coming soon)
  */
 
-import { handleErrors } from "./handleErrors.js";
+import { handleErrors } from "./handleErrors";
 import axios from "axios";
 
 type Weather = {

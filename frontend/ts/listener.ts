@@ -1,9 +1,9 @@
 /**
  * Sets up event listeners for the weather application.
  */
-import {fetchWeather} from './fetchWeather.js';
-import {displayWeather} from "./displayWeather.js";
-import {handleErrors} from "./handleErrors.js";
+import {fetchWeather} from './fetchWeather';
+import {displayWeather} from "./displayWeather";
+import {handleErrors} from "./handleErrors";
 
 type Weather = {
     wind_speed: number;
@@ -19,6 +19,7 @@ type Weather = {
 };
 
 (function setupListeners(): void {
+    console.log(document.getElementById('get-weather-button'))
     const getWeatherButton = (document.getElementById('get-weather-button')!);
     const userZipInput = (document.getElementById('user-zip-input')! as HTMLInputElement);
     let weatherData: Weather | null = null;
@@ -31,7 +32,7 @@ type Weather = {
             })
             .catch(error => {
                 handleErrors(error);
-                console.error('Error fetching weather data:', error);
+                console.error('Oops! Error fetching weather data:', error);
             });
     });
 })();
