@@ -33,7 +33,7 @@
 <!-- enter zip code - navbar-->
 <nav class="navbar fixed-top bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand">Byte Weather</a>
+    <a class="navbar-brand">Weather</a>
     <form class="d-flex" role="search">
       <input id="user-zip-input" class="form-control me-2" type="search" placeholder="Zipcode" aria-label="Zipcode">
       <button id="get-weather-button" class="btn btn-outline-success" type="submit">Get Weather</button>
@@ -52,52 +52,9 @@
     </div>
   </div>
 </header>
-  <!-- weather data containers -->
 <main>
-  <table class="table table-hover">
-    <tbody>
-    <tr>
-      <td>Temperature</td>
-      <td id="temperature">number</td>
-    </tr>
-    <tr>
-      <td>Day Temp</td>
-      <td id="maxTemp">number</td>
-    </tr>
-    <tr>
-      <td>Cloudiness</td>
-      <td id="cloudPercentage">number</td>
-    </tr>
-    <tr>
-      <td>Night Temp</td>
-      <td id="minTemp">number</td>
-    </tr>
-    <tr>
-      <td>Feels like</td>
-      <td id="feelsLike">number</td>
-    </tr>
-    <tr>
-      <td>Sunrise</td>
-      <td id="sunrise">number</td>
-    </tr>
-    <tr>
-      <td>Wind Speed</td>
-      <td id="windSpeed">number</td>
-    </tr>
-    <tr>
-      <td>Humidity</td>
-      <td id="humidity">number</td>
-    </tr>
-    <tr>
-      <td>Wind Direction</td>
-      <td id="windDegrees">number</td>
-    </tr>
-    <tr>
-      <td>Sunset</td>
-      <td id="sunset">number</td>
-    </tr>
-    </tbody>
-  </table>
+  <!-- Weather Cards Container -->
+  <div id="weatherCardsContainer"></div>
 </main>
 <script type="module" src="./ts/listener.ts"></script>
 </body>
