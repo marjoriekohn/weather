@@ -26,21 +26,16 @@ export function displayWeather(weatherData: Weather | null): void {
         return;
     }
 
-    const updateElementText = (id: string, text: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.innerHTML = text;
-        }
-    };
+    const formatDate = (timestamp: number) => new Date(timestamp * 1000).toLocaleTimeString();
 
-    updateElementText('windSpeed', weatherData.wind_speed.toString());
-    updateElementText('windDegrees', weatherData.wind_degrees.toString());
-    updateElementText('temperature', weatherData.temp.toString());
-    updateElementText('humidity', weatherData.humidity.toString());
-    updateElementText('sunset', weatherData.sunset.toString());
-    updateElementText('minTemp', weatherData.min_temp.toString());
-    updateElementText('cloudPercentage', weatherData.cloud_pct.toString());
-    updateElementText('feelsLike', weatherData.feels_like.toString());
-    updateElementText('sunrise', weatherData.sunrise.toString());
-    updateElementText('maxTemp', weatherData.max_temp.toString());
+    document.getElementById('temperature')!.textContent = `${weatherData.temp} °C`;
+    document.getElementById('maxTemp')!.textContent = `${weatherData.max_temp} °C`;
+    document.getElementById('minTemp')!.textContent = `${weatherData.min_temp} °C`;
+    document.getElementById('cloudPercentage')!.textContent = `${weatherData.cloud_pct}%`;
+    document.getElementById('feelsLike')!.textContent = `${weatherData.feels_like} °C`;
+    document.getElementById('sunrise')!.textContent = formatDate(weatherData.sunrise);
+    document.getElementById('sunset')!.textContent = formatDate(weatherData.sunset);
+    document.getElementById('windSpeed')!.textContent = `${weatherData.wind_speed} m/s`;
+    document.getElementById('humidity')!.textContent = `${weatherData.humidity}%`;
+    document.getElementById('windDegrees')!.textContent = `${weatherData.wind_degrees}°`;
 }
