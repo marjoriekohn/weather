@@ -1,3 +1,3 @@
 import moment from 'moment';
-const currentTime = moment().format('MMMM Do YYYY, h:mm a');
+const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
 (document.getElementById('current-time')!).innerHTML = currentTime;
