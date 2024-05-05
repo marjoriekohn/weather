@@ -1,0 +1,2 @@
+:root{--headerfont:"Rock Salt",Arial,sans-serif;--bodyfont:"Poppins",Arial,sans-serif}body{font-family:var(--headerfont);font-size:20px}main{justify-content:center;align-items:center;display:flex}header{margin-top:8rem;margin-bottom:1rem}table{font-family:var(--bodyfont);border:.5rem dashed #28a745;border-radius:1rem}main .table{width:auto;margin:0 auto;padding:2rem}td:last-child{text-align:right}
+/*# sourceMappingURL=index.56f69b3d.css.map */

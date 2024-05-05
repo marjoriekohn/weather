@@ -1,6 +1,5 @@
 import moment from 'moment';
 
-// Ensure moment.js is loaded and available
 document.addEventListener('DOMContentLoaded', function() {
     function updateTime() {
         const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
@@ -15,4 +14,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(updateTime, 1000);
 });
-
