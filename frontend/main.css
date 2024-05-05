@@ -56,7 +56,6 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--mainBackground);
 }
 
 input, button {
@@ -67,7 +66,7 @@ input, button {
 }
 
 button {
-	background-color: var(--button);
+	background-color: var(--mainBackground);
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
@@ -77,24 +76,22 @@ button:hover {
 }
 
 #weatherCardsContainer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
-	width: 100%;
-	margin: auto;
+	width: 90%;
+	margin: 2rem auto;
 }
 
 .weather-data-card {
 	background-color: var(--cardBackground);
 	border: 1px solid var(--border);
 	border-radius: 10px;
-	padding: 15px;
-	width: calc(33.333% - 20px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 1rem;
 	transition: transform 0.3s ease-in-out;
 }
 
