@@ -1,3 +1,18 @@
 import moment from 'moment';
-const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
-(document.getElementById('current-time')!).innerHTML = currentTime;
+
+// Ensure moment.js is loaded and available
+document.addEventListener('DOMContentLoaded', function() {
+    function updateTime() {
+        const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+        const timeElement = document.getElementById('current-time');
+
+        if (timeElement) {
+            timeElement.innerHTML = currentTime;
+        } else {
+            console.error('Time element not found');
+        }
+    }
+
+    setInterval(updateTime, 1000);
+});
+
