@@ -39,6 +39,12 @@ header {
 	font-family: var(--headerfont);
 }
 
+h2 {
+	font-size: 2.5rem; /* 40px */
+	margin: 1.25rem 0; /* 20px */
+	color: var(--heading);
+}
+
 .header-form {
 	display: flex;
 	justify-content: center;
@@ -63,6 +69,7 @@ input, button {
 	margin: 0.3125rem; /* 5px */
 	border: 0.125rem dashed var(--border); /* 2px */
 	border-radius: 0.3125rem; /* 5px */
+	font-size: 1.125rem; /* 18px */
 }
 
 button {
