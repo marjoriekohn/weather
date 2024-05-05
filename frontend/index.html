@@ -23,36 +23,19 @@
 </head>
 
 <body>
-<!-- Loading Indicator -->
-<div id="loadingIndicator">Loading weather data...</div>
-
-<!-- Error Message -->
-<div id="errorMessage">Error: </div>
-
-<!-- enter zip code - navbar-->
-<nav class="navbar fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand">Weather</a>
-    <form class="d-flex" role="search">
-      <input id="user-zip-input" class="form-control me-2" type="search" placeholder="Zipcode" aria-label="Zipcode">
-      <button id="get-weather-button" class="btn btn-outline-success" type="submit">Get Weather</button>
-    </form>
-  </div>
-</nav>
-<!--END OF NAVBAR SECTION-->
-
-<!-- Date and time container-->
+<!-- Date, Time, Zipcode and Get Weather Button -->
 <header>
-  <div class="container text-center">
-    <div class="col">
-      <div class="row">
-        <div id="current-time" class="p-3"></div>
-      </div>
-    </div>
-  </div>
+  <div id="current-time" class="header-item"></div>
+  <form class="header-form" role="search">
+    <input id="user-zip-input" type="search" placeholder="Zipcode" aria-label="Zipcode">
+    <button id="get-weather-button" type="submit">Get Weather</button>
+  </form>
+  <div id="loadingIndicator" style="display: none;">Loading weather data...</div>
+  <div id="errorMessage" style="display: none;">Error:</div>
 </header>
+
+<!-- Weather Cards Container -->
 <main>
-  <!-- Weather Cards Container -->
   <div id="weatherCardsContainer"></div>
 </main>
 <script type="module" src="./ts/listener.ts"></script>
