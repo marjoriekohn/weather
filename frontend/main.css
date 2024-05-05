@@ -86,7 +86,7 @@ button:hover {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
 	gap: 1.25rem; /* 20px */
-	width: 90%;
+	width: 80%;
 	margin: 2rem auto;
 }
 
