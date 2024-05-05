@@ -85,7 +85,7 @@ button:hover {
 
 .weather-data-card {
 	background-color: var(--cardBackground);
-	border: 1px solid var(--border);
+	border: 1rem solid var(--border);
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
